@@ -13,7 +13,7 @@ mcstats.showEventList = function() {
             }
 
             var holder, info;
-            if(e.ranking > 0) {
+            if(e.ranking.length > 0) {
                 var ranking = e.ranking;
                 var highestValue = Math.max(...ranking.map(item => item.value));
                 var highestValueItem = ranking.find(item => item.value === highestValue);
