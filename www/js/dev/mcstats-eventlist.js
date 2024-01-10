@@ -13,9 +13,12 @@ mcstats.showEventList = function() {
             }
 
             var holder, info;
-            if(e.best) {
-                holder = mcstats.playerWidget(e.best.uuid);
-                info = award.desc + ': ' + mcstats.formatValue(e.best.value, award.unit, true);
+            if(e.ranking) {
+                var ranking = e.ranking:
+                var highestValue = Math.max(...ranking.map(item => item.value));
+                var highestValueItem = ranking.find(item => item.value === highestValue);
+                holder = mcstats.playerWidget(highestValueItem.uuid);
+                info = award.desc + ': ' + mcstats.formatValue(e.highestValue, award.unit, true);
             } else {
                 holder = mcstats.playerWidget(false);
                 info = `<span class="text-muted">(${award.desc})</span>`;
