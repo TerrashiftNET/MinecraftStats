@@ -14,7 +14,7 @@ mcstats.showEventList = function() {
 
             var holder, info;
             if(e.ranking) {
-                var ranking = e.ranking:
+                var ranking = e.ranking;
                 var highestValue = Math.max(...ranking.map(item => item.value));
                 var highestValueItem = ranking.find(item => item.value === highestValue);
                 holder = mcstats.playerWidget(highestValueItem.uuid);
