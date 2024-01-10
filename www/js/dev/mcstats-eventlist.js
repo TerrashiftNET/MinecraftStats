@@ -6,6 +6,7 @@ mcstats.showEventList = function() {
         keysByDate.forEach(function(id){
             var e = mcstats.events[id];
             var award = mcstats.awards[e.link];
+            var rankingArray = e.ranking;
 
             var eventWidget = mcstats.eventWidget(id);
             if(e.active) {
@@ -13,10 +14,9 @@ mcstats.showEventList = function() {
             }
 
             var holder, info;
-            if(e.ranking.length > 0) {
-                var ranking = e.ranking;
-                var highestValue = Math.max(...ranking.map(item => item.value));
-                var highestValueItem = ranking.find(item => item.value === highestValue);
+            if(rankingArray.length > 0) {
+                var highestValue = Math.max(...rankingArray.map(item => item.value));
+                var highestValueItem = rankingArray.find(item => item.value === highestValue);
                 holder = mcstats.playerWidget(highestValueItem.uuid);
                 info = award.desc + ': ' + mcstats.formatValue(highestValue, award.unit, true);
             } else {
