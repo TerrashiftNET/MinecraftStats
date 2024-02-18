@@ -25,8 +25,6 @@ mcstats.showEventList = function () {
             var info = `<span class="text-muted">${award.desc})</span>`;
           }
 
-          console.log("holder" + holder);
-
           var eventTime;
           if (e.active) {
             eventTime = `${mcstats.localize(
