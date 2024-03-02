@@ -1,9 +1,9 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import McstatsRow from '@/components/McstatsRow.vue'; 
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <McstatsRow />
   </main>
 </template>
