@@ -58,7 +58,7 @@
   font-weight: normal;
 }
 
-body {
+/* body {
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
@@ -83,4 +83,14 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+} */
+
+body {
+  font-family: minecraftia, Zpix, monospace;
+  color: #eee;
+  background-position:
+    left top,
+    left 64px,
+    left 128px;
+  background: linear-gradient(-235deg, #565eb5 10%, #fd90af 100%);
 }
