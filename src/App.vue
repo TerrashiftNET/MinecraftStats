@@ -1,8 +1,13 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import NavBar from './components/NavBar.vue'
+import BaseHeader from './components/BaseHeader.vue'
 </script>
 
 <template>
+    <NavBar />
+  <BaseHeader />
+
   <div id="content" style="display: block">
   <RouterView />
   </div>

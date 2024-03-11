@@ -5,7 +5,7 @@
       <span id="view-title" class="text-underline text-shadow">Award Overview</span>
     </div>
     <div id="view-content">
-      <div v-if="items.length === 0">
+      <div class="text-center align-middle" v-if="items.length === 0">
         <p>Loading...</p>
       </div>
       <div v-for="item in items" :key="item.id" id="col-sm">
@@ -103,21 +103,14 @@ export default {
 }
 
 #col-sm {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  padding: 1rem;
-  margin: 0 auto;
-  max-width: 1200px;
+  flex: 1 0 0%;
 }
 
 .mcstats-entry {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  padding: 1rem;
-  margin: 0 auto;
-  max-width: 1200px;
+  border: .125rem solid #444;
+  border-radius: .5rem;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: rgba(255,255,255,0.5) 0 0 0.75rem;
 }
 
 .mcstats-item {
@@ -130,10 +123,18 @@ export default {
 }
 
 .round-box {
-  border-radius: 0.5rem;
-  background-color: #f0f0f0;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  border-radius: .5rem;
+  border: white solid 2px;
 }
+
+.p-1 {
+  padding: .25rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
 
 .text-center {
   text-align: center;
@@ -217,6 +218,12 @@ export default {
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
   }
 }
 
