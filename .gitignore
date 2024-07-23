@@ -28,3 +28,5 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+/data
+/src/assets/data
