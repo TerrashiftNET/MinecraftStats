@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-// import EventView from '../views/EventView.vue'
-// import HoFView from '../views/HoFView.vue'
+import AwardView from '../views/AwardView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,21 +11,16 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/#awards',
+      path: '/awards',
       name: 'awards',
       component: HomeView
     },
-    // {
-    //   path: '/#events',
-    //   name: 'events',
-    //   component: EventView
-    // },
-    // {
-    //   path: '/#hof',
-    //   name: 'hof',
-    //   component: HoFView
-    // }
-
+    {
+      path: '/award/:id',
+      name: 'award',
+      component: AwardView,
+      props: true,
+    }
   ]
 })
 
