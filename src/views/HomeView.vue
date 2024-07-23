@@ -1,54 +1,43 @@
 <template>
   <div id="view" class="container mx-auto">
     <div class="h1 my-4 text-center">
-      <img id="view-icon" class="img-pixelated img-left img-textsize align-baseline" style="display: none;">
+      <img id="view-icon" class="img-pixelated img-left img-textsize align-baseline" style="display: none" />
       <span id="view-title" class="text-underline text-shadow">Award Overview</span>
-    </div>
-    <div id="view-content">
-      <div class="text-center align-middle" v-if="items.length === 0">
-        <p>Loading...</p>
-      </div>
-      <div v-for="item in items" :key="item.id" id="col-sm">
-        <div class="container p-1 mb-3 mcstats-entry">
-          <div class="h4 p-1 round-box text-center align-middle">
-            <a :href="item.stat">{{ item.stat }}</a>
-          </div>
-          <div class="p-1 round-box text-center">
-            <canvas width="8" height="8"
-              class="minecraft-face d-inline-block img-pixelated textw-1_5 align-baseline me-1">
-              <img :src="item.face" alt="Minecraft face" class="d-none">
-            </canvas>
-            <a :href="item.name">{{ item.name }}</a>
-            <br>
-            :"{{ item.stat }}"
-            <span class="text-data">({{ item.value }})</span>
-          </div>
+      <div id="view-content">
+        <div class="text-center align-middle" v-if="items.length === 0">
+          <p>Loading...</p>
+        </div>
+        <div class="grid" v-else :style="{ gridTemplateColumns: gridColumnCount }">
+          <AwardItem v-for="item in items" :key="item.id" :stat="item.stat" :title="item.title" :holder="item.name"
+            :value="item.value" :face="item.face" />
         </div>
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
+import AwardItem from '../components/AwardItem.vue';
 export default {
+  components: {
+    AwardItem
+  },
   data() {
     return {
       items: []
-    };
+    }
   },
   created() {
-    this.fetchItemsFromDatabase()
-      .then((data) => {
-        this.items = data;
-      });
+    this.fetchItemsFromDatabase().then((data) => {
+      this.items = data
+    })
   },
   computed: {
-    gridColumnCound() {
-      const numItems = this.items.length;
-      const colums = Math.ceil(Math.sqrt(numItems));
-      return `repeat(${colums}, 1fr)`;
-    },
+    gridColumnCount() {
+      const numItems = this.items.length
+      const columns = numItems >= 3 ? 3 : numItems
+      return `repeat(${columns}, 1fr)`
+    }
   },
   methods: {
     fetchItemsFromDatabase() {
@@ -58,173 +47,48 @@ export default {
             {
               id: 1,
               name: 'Player 1',
-              face: 'https://crafatar.com/avatars/1',
-              stat: 'Kills',
+              face: 'aeddaba78a5be1b40be04e10d88556ad4ea0be0fc6c4d78914d1ed9077f04e34',
+              stat: 'break_tools',
               value: 100,
+              title: "Tools Breaker",
             },
             {
               id: 2,
               name: 'Player 2',
-              face: 'https://crafatar.com/avatars/2',
-              stat: 'Deaths',
+              face: 'aeddaba78a5be1b40be04e10d88556ad4ea0be0fc6c4d78914d1ed9077f04e34',
+              stat: 'death',
               value: 50,
+              title: "Death Master",
             },
             {
               id: 3,
               name: 'Player 3',
-              face: 'https://crafatar.com/avatars/3',
-              stat: 'Blocks broken',
+              face: 'aeddaba78a5be1b40be04e10d88556ad4ea0be0fc6c4d78914d1ed9077f04e34',
+              stat: 'mine_coal_ore',
               value: 1000,
+              title: "Coal Miner",
             },
             {
               id: 4,
               name: 'Player 4',
-              face: 'https://crafatar.com/avatars/4',
-              stat: 'Blocks placed',
+              face: 'aeddaba78a5be1b40be04e10d88556ad4ea0be0fc6c4d78914d1ed9077f04e34',
+              stat: 'place_glass',
               value: 2000,
-            },
-          ]);
-        }, 1000);
-      });
-
+              title: "Glass Placer",
+            }
+          ])
+        }, 1000)
+      })
     }
   }
-};
+}
 </script>
 
-<style scoped>
-#view-content {
+<style>
+.grid {
+  /* create a 3 wide grid */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  padding: 1rem;
-  margin: 0 auto;
-  max-width: 1200px;
+  grid-gap: 1rem;
 }
-
-#col-sm {
-  flex: 1 0 0%;
-}
-
-.mcstats-entry {
-  border: .125rem solid #444;
-  border-radius: .5rem;
-  background: rgba(0, 0, 0, 0.7);
-  box-shadow: rgba(255,255,255,0.5) 0 0 0.75rem;
-}
-
-.mcstats-item {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  padding: 1rem;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-.round-box {
-  border-radius: .5rem;
-  border: white solid 2px;
-}
-
-.p-1 {
-  padding: .25rem !important;
-}
-
-.mb-3 {
-  margin-bottom: 1rem !important;
-}
-
-
-.text-center {
-  text-align: center;
-}
-
-.align-middle {
-  align-items: center;
-}
-
-.align-baseline {
-  align-items: baseline;
-}
-
-.textw-1_5 {
-  width: 1.5rem;
-}
-
-.text-data {
-  font-size: 0.8rem;
-  color: #666;
-}
-
-.minecraft-face {
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  background-color: #fff;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
-}
-
-.minecraft-face img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
-}
-
-.img-pixelated {
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
-}
-
-.d-none {
-  display: none;
-}
-
-.mx-auto {
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-.container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1320px;
-  }
-}
-
 </style>
