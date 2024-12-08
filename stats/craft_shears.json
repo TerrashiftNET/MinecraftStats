@@ -1,0 +1,9 @@
+{
+    "id": "craft_shears",
+    "unit": "int",
+    "minVersion": 2515,
+    "reader": {
+        "$type": "int",
+        "path": ["minecraft:crafted","minecraft:shears"]
+    }
+}
