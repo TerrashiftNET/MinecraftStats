@@ -22,7 +22,7 @@ html {
 /* Body */
 body {
   font-family: minecraftia, Zpix, monospace;
-  color: #cdd6f4;
+  color: #11111b;
   background-position: left top, left 64px, left 128px;
   background-color: #1e1e2e;
 }
@@ -41,7 +41,7 @@ a:hover {
 
 /* Nav */
 #navigation {
-  background-color: rgb(88, 91, 112 );
+  background-color: #313244;
   border-radius: 0.5rem;
   align-items: center;
   justify-content: center;
@@ -75,7 +75,7 @@ a:hover {
 
 /* Info */
 #info {
-  background-color: rgb(108, 112, 134);
+  background-color: #313244
   border-radius: 0.5rem;
 }
 
@@ -286,7 +286,7 @@ a.dropdown-item:hover {
 .mcstats-entry {
   /* border: 0.125rem solid #fff; */
   border-radius: 0.5rem;
-  background: #313244;
+  background: #1e1e2e;
   box-shadow: rgb(0 0 0 / 50%) 0 0 0.75rem;
 }
 
