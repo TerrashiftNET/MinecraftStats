@@ -2,16 +2,14 @@
   "id": "place_resin",
   "unit": "int",
   "reader": {
-    "reader": {
-      "$type": "match-sum",
-      "path": ["minecraft:used"],
-      "patterns": [
-        "minecraft:resin_block",
-        "minecraft:resin_brick_slab",
-        "minecraft:resin_brick_stairs",
-        "minecraft:resin_brick_wall",
-        "minecraft:resin_bricks"
-      ]
-    }
+    "$type": "match-sum",
+    "path": ["minecraft:used"],
+    "patterns": [
+      "minecraft:resin_block",
+      "minecraft:resin_brick_slab",
+      "minecraft:resin_brick_stairs",
+      "minecraft:resin_brick_wall",
+      "minecraft:resin_bricks"
+    ]
   }
 }
