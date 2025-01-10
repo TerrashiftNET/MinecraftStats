@@ -1,0 +1,8 @@
+{
+  "id": "mine_lectern",
+  "unit": "int",
+  "reader": {
+    "$type": "int",
+    "path": ["minecraft:mined", "minecraft:lectern"]
+  }
+}

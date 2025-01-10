@@ -1,0 +1,8 @@
+{
+  "id": "use_wind_charge",
+  "unit": "int",
+  "reader": {
+    "$type": "int",
+    "path": ["minecraft:used", "minecraft:wind_charge"]
+  }
+}
