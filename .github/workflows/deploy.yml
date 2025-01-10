@@ -2,7 +2,7 @@ name: Deploy artifacts
 
 on:
   workflow_run:
-    workflows: [gradle]
+    workflows: [Java CI with Gradle]
     types: [completed]
 
 jobs:
@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v4
         with:
-        pattern: "*.zip"
+        pattern: "*Stats*.zip"
       - name:
         run: unzip *.zip; rm -f *.zip
       - name: rsync deployment
