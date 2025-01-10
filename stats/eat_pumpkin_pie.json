@@ -1,0 +1,8 @@
+{
+    "id": "eat_pumpkin_pie",
+    "unit": "int",
+    "reader": {
+        "$type": "int",
+        "path": ["minecraft:used","minecraft:pumpkin_pie"]
+    }
+}
