@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/download-artifact@v4
         with:
-        pattern: "*Stats*.zip"
+          pattern: "*Stats*.zip"
       - name:
         run: unzip *.zip; rm -f *.zip
       - name: rsync deployment
