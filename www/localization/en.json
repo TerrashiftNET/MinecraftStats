@@ -479,6 +479,8 @@
   "award.use_totem.title": "Nine Lives",
   "award.use_water_bucket.desc": "Water buckets emptied",
   "award.use_water_bucket.title": "Aqueduct",
+  "award.use_wind_charge.desc": "Wind Charges used",
+  "award.use_wind_charge.title": "Wind Blower",
   "award.walk.desc": "Distance walked",
   "award.walk.title": "Traveler",
   "award.walk_on_water.desc": "Distance walked on water",
