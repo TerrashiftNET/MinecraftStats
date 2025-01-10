@@ -12,12 +12,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: robinraju/release-downloader@v1
         with:
-          pattern: MinecraftStats*
-          merge-multiple: true
-      - name:
-        run: unzip *.zip; rm -f *.zip
+          latest: true
+          fileName: MinecraftStats*
+          extract: true
       - name: rsync deployment
         uses: burnett01/rsync-deployments@7.0.1
         with:
