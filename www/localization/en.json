@@ -387,6 +387,8 @@
   "award.place_piston.title": "Mechanic",
   "award.place_rails.desc": "Rails placed",
   "award.place_rails.title": "Railway Company",
+  "award.place_resin.title": "Tapper",
+  "award.place_resin.desc": "Resin blocks placed",
   "award.place_sapling.desc": "Trees planted",
   "award.place_sapling.title": "Forester",
   "award.place_scaffolding.desc": "Scaffoldings placed",

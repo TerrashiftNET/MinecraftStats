@@ -1,9 +1,9 @@
 {
-  "id": "place_electrics",
+  "id": "place_flower",
   "unit": "int",
   "reader": {
     "$type": "match-sum",
-    "path": ["minecraft:placed"],
+    "path": ["minecraft:used"],
     "patterns": [
       "minecraft:dandelion",
       "minecraft:poppy",
