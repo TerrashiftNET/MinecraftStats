@@ -20,11 +20,7 @@ jobs:
       - name: rsync deployment
         uses: burnett01/rsync-deployments@7.0.1
         with:
-          switches: >
-            -axAXvS
-            --delete
-            --exclude="config.json"
-            --rsync-path="sudo rsync"
+          switches: -axAXvS --delete --exclude="*config.json" --rsync-path="sudo rsync"
           remote_host: host.terrashift.net
           remote_path: ${{ secrets.DEPLOY_PATH }}
           remote_user: ${{ secrets.DEPLOY_USER }}
