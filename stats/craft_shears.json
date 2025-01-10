@@ -1,11 +1,9 @@
 {
     "id": "craft_shears",
     "unit": "int",
+    "minVersion": 2515,
     "reader": {
-        "$type": "match-sum",
-        "path": ["minecraft:crafted"],
-        "patterns": [
-            "minecraft:shears"
-        ]
+        "$type": "int",
+        "path": ["minecraft:crafted","minecraft:shears"]
     }
 }
