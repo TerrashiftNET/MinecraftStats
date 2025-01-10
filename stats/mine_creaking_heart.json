@@ -1,0 +1,8 @@
+{
+  "id": "mine_creaking_heart",
+  "unit": "int",
+  "reader": {
+    "$type": "int",
+    "path": ["minecraft:mined", "minecraft:creaking_heart"]
+  }
+}
