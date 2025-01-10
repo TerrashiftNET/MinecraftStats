@@ -1,12 +1,9 @@
----
-
 name: Deploy artifacts
 
 on:
   workflow_run:
-    - "gradle"
-  types:
-    - completed
+    workflows: [gradle]
+    types: [completed]
 
 jobs:
   deploy:
