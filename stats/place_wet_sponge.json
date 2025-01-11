@@ -1,0 +1,8 @@
+{
+    "id": "place_wet_sponge",
+    "unit": "int",
+    "reader": {
+        "$type": "int",
+        "path": ["minecraft:used","minecraft:wet_sponge"]
+    }
+}
