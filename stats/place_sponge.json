@@ -3,6 +3,6 @@
     "unit": "int",
     "reader": {
         "$type": "int",
-        "path": ["minecraft:crafted","minecraft:sponge"]
+        "path": ["minecraft:used","minecraft:sponge"]
     }
 }
