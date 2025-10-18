@@ -22,14 +22,14 @@ html {
 /* Body */
 body {
   font-family: minecraftia, Zpix, monospace;
-  color: #89b4fa;
+  color: #8bd5ca;
   background-position: left top, left 64px, left 128px;
-  background-color: #11111b;
+  background-color: #181926;
 }
 
 /* Links */
 a {
-  color: #cdd6f4;;
+  color: #cdd6f4;
   text-decoration: none;
   text-align: center;
 }
@@ -41,7 +41,7 @@ a:hover {
 
 /* Nav */
 #navigation {
-  background-color: #313244;
+  background-color: #24273a;
   border-radius: 0.5rem;
   align-items: center;
   justify-content: center;
@@ -66,34 +66,34 @@ a:hover {
   color: #cdd6f4;
 }
 .navbar-dark .navbar-nav .nav-link:focus {
-  color: rgb(137, 180, 250);
+  color: #8bd5ca;
 }
 .navbar-dark .navbar-nav .nav-link:hover {
-  color: rgb(137, 180, 250);
+  color: #8bd5ca;
   text-decoration: underline;
 }
 
 /* Info */
 #info {
-  background-color: #313244;
+  background-color: #24273a;
   border-radius: 0.5rem;
 }
 
 /* Text content types */
 .text-muted {
-  color: #cdd6f4 !important;
+  color: rgb(145, 215, 227) !important;
 }
 .text-success {
-  color: rgb(166, 227, 161) !important;
+  color: rgb(166, 218, 149) !important;
 }
 .text-danger {
-  color: rgb(243, 139, 168) !important;
+  color: rgb(237, 135, 150) !important;
 }
 .text-info {
-  color: rgb(249, 226, 175) !important;
+  color: rgb(238, 212, 159) !important;
 }
 .text-data {
-  color: rgb(137, 180, 250) !important;
+  color: rgb(138, 173, 244) !important;
 }
 
 /* Tables */
@@ -113,11 +113,11 @@ a:hover {
 }
 
 .table tbody tr:hover {
-  color: rgba(147, 153, 178, 0.3)
+  color: rgba(147, 153, 178, 0.3);
 }
 
 .table-hover tbody tr:hover {
-  background-color: rgba(147, 153, 178, 0.3)
+  background-color: rgba(147, 153, 178, 0.3);
 }
 
 /* Time data */
@@ -269,7 +269,7 @@ a.dropdown-item:hover {
   color: #444;
 }
 .rank-1 {
-  color: #f9e2af
+  color: #f9e2af;
 }
 .rank-2 {
   color: #a6adc8;
@@ -280,13 +280,13 @@ a.dropdown-item:hover {
 
 .round-box {
   border-radius: 0.5rem;
-  border: #6c7086 solid 2px;
+  border: #5b6078 solid 2px;
 }
 
 .mcstats-entry {
   /* border: 0.125rem solid #fff; */
   border-radius: 0.5rem;
-  background: #1e1e2e;
+  background: #1e2030;
   box-shadow: rgb(0 0 0 / 50%) 0 0 0.75rem;
 }
 
@@ -295,7 +295,7 @@ a.dropdown-item:hover {
 }
 
 #footer {
-  background-color: rgb(24, 24, 37, 0.75);
+  background-color: rgb(36, 39, 58, 0.75);
   background-position: top left;
   background-repeat: repeat;
 }
@@ -305,49 +305,49 @@ a.dropdown-item:hover {
   color: #cdd6f4;
 } /* black */
 .mc-text-1 {
-  color: #89b4fa;
+  color: #8aadf4;
 } /* dark_blue */
 .mc-text-2 {
-  color: #a6e3a1;
+  color: #a6da95;
 } /* dark_green */
 .mc-text-3 {
-  color: #94e2d5;
+  color: #8bd5ca;
 } /* dark_aqua */
 .mc-text-4 {
-  color: #eba0ac;
+  color: #ee99a0;
 } /* dark_red */
 .mc-text-5 {
-  color: #b4befe;
+  color: #c6a0f6;
 } /* dark_purple */
 .mc-text-6 {
-  color: #f9e2af;
+  color: #eed49f;
 } /* gold */
 .mc-text-7 {
-  color: #cdd6f4;
+  color: #b8c0e0;
 } /* gray */
 .mc-text-8 {
-  color: #cdd6f4;
+  color: #a5adcb;
 } /* dark_gray */
 .mc-text-9 {
-  color: #89b4fa;
+  color: #8aadf4;
 } /* blue */
 .mc-text-a {
-  color: #94e2d5  ;
+  color: #a6da95;
 } /* green */
 .mc-text-b {
-  color: #89dceb;
+  color: #91d7e3;
 } /* aqua */
 .mc-text-c {
-  color: #f38ba8;
+  color: #ed8796;
 } /* red */
 .mc-text-d {
-  color: #cba6f7;
+  color: #b7bdf8;
 } /* light_purple */
 .mc-text-e {
-  color: #f9e2af;
+  color: #eed49f;
 } /* yellow */
 .mc-text-f {
-  color: #cdd6f4;
+  color: #cad3f5;
 } /* white */
 .mc-text-k {
   /* obfuscated */
