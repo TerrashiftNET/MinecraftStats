@@ -31,7 +31,7 @@ jobs:
         distribution: 'temurin'
         fetch-depth: 0
     - name: Build with Gradle
-      uses: gradle/gradle-build-action@v2
+      uses: gradle/actions/setup-gradle@v3
       with:
         arguments: release
         gradle-version: 8.6
