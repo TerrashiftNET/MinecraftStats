@@ -35,7 +35,7 @@ jobs:
       with:
         gradle-version: '8.6'
     - name: Build with Gradle
-      run: ./gradlew release
+      run: gradle release
     - name: Bump version and push tag
       id: tag_version
       uses: mathieudutour/github-tag-action@v6.1  
