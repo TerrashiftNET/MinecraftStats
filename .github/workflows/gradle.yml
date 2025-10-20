@@ -20,7 +20,7 @@ permissions:
 
 jobs:
  build:
-  if: ${{ contains(github.event.head_commit.message, '#release') }}
+  if: ${{ contains(github.event.head_commit.message, '#release-web') }}
   runs-on: ubuntu-latest
   steps:
     - uses: actions/checkout@v3
@@ -30,11 +30,12 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         fetch-depth: 0
-    - name: Build with Gradle
-      uses: gradle/gradle-build-action@v2
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v3
       with:
-        arguments: release
-        gradle-version: 8.6
+        gradle-version: '8.6'
+    - name: Build with Gradle
+      run: gradle releaseWeb
     - name: Bump version and push tag
       id: tag_version
       uses: mathieudutour/github-tag-action@v6.1  
