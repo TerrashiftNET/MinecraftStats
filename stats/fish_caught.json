@@ -1,0 +1,8 @@
+{
+  "id": "fish_caught",
+  "unit": "int",
+  "reader": {
+    "$type": "int",
+    "path": ["minecraft:custom", "minecraft:fish_caught"]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "ride_happy_ghast",
+  "unit": "cm",
+  "reader": {
+    "$type": "int",
+    "path": ["minecraft:custom", "minecraft:happy_ghast_one_cm"]
+  }
+}
