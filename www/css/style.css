@@ -79,6 +79,10 @@ a:hover {
   border-radius: 0.5rem;
 }
 
+.text-center {
+  align-content: center;
+}
+
 /* Text content types */
 .text-muted {
   color: rgb(145, 215, 227) !important;
