@@ -5,7 +5,7 @@
         "$type": "match-sum",
         "path": ["minecraft:used"],
         "patterns": [
-            "minecraft:.*potion"
+            "minecraft:\w.*potion"
         ]
     }
 }
