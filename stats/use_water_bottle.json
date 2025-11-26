@@ -2,7 +2,7 @@
     "id": "use_water_bottle",
     "unit": "int",
     "reader": {
-        "$type": "match-sum",
+        "$type": "int",
         "path": ["minecraft:used", "minecraft:potion"]
     }
 }
