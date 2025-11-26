@@ -1,11 +1,8 @@
 {
-    "id": "use_potion",
+    "id": "use_water_bottle",
     "unit": "int",
     "reader": {
         "$type": "match-sum",
-        "path": ["minecraft:used"],
-        "patterns": [
-            "minecraft:potion"
-        ]
+        "path": ["minecraft:used", "minecraft:potion"]
     }
 }
