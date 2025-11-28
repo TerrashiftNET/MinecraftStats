@@ -4,6 +4,6 @@
     "reader": {
         "$type": "regex-set-count",
         "path": ["advancements"],
-        "patterns": ["^minecraft:(story|nether|end|adventure|husbandry)"]
+        "patterns": ["^minecraft:(story|nether|end|adventure|husbandry).*"]
         }
     }
