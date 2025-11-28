@@ -1,0 +1,8 @@
+{
+    "id": "advancement",
+    "unit": "int",
+    "reader": {
+        "$type": "set-count",
+        "path": ["advancements"]
+        }
+    }
