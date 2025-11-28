@@ -50,9 +50,24 @@ public class StatParser {
         return new SetCountReader(path);
     }
 
+    private static RegexSetCountReader parseRegexSetCountReader(JSONObject obj) throws JSONException {
+        JSONArray jsonPath = obj.getJSONArray("path");
+        String[] path = new String[jsonPath.length()];
+        for (int i = 0; i < path.length; i++) {
+            path[i] = jsonPath.getString(i);
+        }
+
+        JSONArray jsonPatterns = obj.getJSONArray("patterns");
+        String[] patterns = new String[jsonPatterns.length()];
+        for (int i = 0; i < patterns.length; i++) {
+            patterns[i] = jsonPatterns.getString(i);
+        }
+        return new RegexSetCountReader(path, patterns);
+    }
+
     private static DataReader parseReader(JSONObject obj) throws JSONException, StatParseException {
         String type = obj.getString("$type");
-        switch(type) {
+        switch (type) {
             case "int":
                 return parseIntReader(obj);
             case "sum":
@@ -61,6 +76,8 @@ public class StatParser {
                 return parseMatchSumReader(obj);
             case "set-count":
                 return parseSetCountReader(obj);
+            case "regex-set-count":
+                return parseRegexSetCountReader(obj);
             default:
                 throw new StatParseException("unsupported reader type: " + type);
         }

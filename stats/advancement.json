@@ -2,7 +2,8 @@
     "id": "advancement",
     "unit": "int",
     "reader": {
-        "$type": "set-count",
-        "path": ["advancements"]
+        "$type": "regex-set-count",
+        "path": ["advancements"],
+        "patterns": ["^minecraft:(story|nether|end|adventure|husbandry)"]
         }
     }
